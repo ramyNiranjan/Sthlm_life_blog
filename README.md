@@ -1,6 +1,6 @@
-# NextJS Typescript Boilerplate
+# Sthlm_life blog
 
-Bootstrap a developer-friendly NextJS app configured with:
+Write what you see,make you heard by all stockholmare
 
 - [Typescript](https://www.typescriptlang.org/)
 - Linting with [ESLint](https://eslint.org/)
