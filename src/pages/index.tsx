@@ -1,11 +1,7 @@
 import Head from 'next/head'
 import React from 'react'
 
-interface HomeProps {
-  text: string
-}
-
-export const Home: React.FC<HomeProps> = () => {
+export const Home: React.FC = () => {
   return (
     <div className="container">
       <Head>
