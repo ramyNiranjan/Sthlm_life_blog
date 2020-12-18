@@ -2,6 +2,7 @@ import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit'
 import createSagaMiddleware from 'redux-saga'
 
 import { rootReducer, rootSaga } from './reducer'
+import { persistStore } from 'redux-persist'
 
 const sagaMiddleware = createSagaMiddleware({
   onError: (error: any) => {
@@ -22,6 +23,8 @@ const store = configureStore({
   reducer: rootReducer,
   middleware,
 })
+
+export const persistor = persistStore(store)
 
 sagaMiddleware.run(rootSaga)
 

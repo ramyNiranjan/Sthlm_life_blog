@@ -1,5 +1,8 @@
 import Head from 'next/head'
 import React from 'react'
+import Main from '../components/Main'
+import { Provider } from 'react-redux'
+import store, { persistor } from '../redux/store'
 
 export const Home: React.FC = () => {
   return (
@@ -10,7 +13,9 @@ export const Home: React.FC = () => {
       </Head>
 
       <main>
-        <h1>Sthlm Blog</h1>
+        <Provider store={store}>
+          <Main store={store} persistor={persistor} />
+        </Provider>
       </main>
 
       <footer></footer>
