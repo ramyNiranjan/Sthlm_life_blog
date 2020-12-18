@@ -2,7 +2,7 @@ import Head from 'next/head'
 import React from 'react'
 
 interface HomeProps {
-  testexample: string
+  text: string
 }
 
 export const Home: React.FC<HomeProps> = () => {
