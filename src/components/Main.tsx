@@ -13,7 +13,7 @@ function Main() {
 
   return (
     <div className="App">
-      <input type="text" />
+      <p>Fetch users</p>
     </div>
   )
 }
