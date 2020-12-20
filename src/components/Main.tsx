@@ -1,18 +1,21 @@
-import { connect, ConnectedProps } from 'react-redux'
 import React, { useEffect } from 'react'
-import { actions as mainActions } from '../redux/dataRedux'
+import { useDispatch } from 'react-redux'
 
-const connector = connect(null, mainActions)
+import { GetUsers } from '../redux/actions/UserActions'
 
-type PropsFromRedux = ConnectedProps<typeof connector>
+function Main() {
+  const dispatch = useDispatch()
+  //   const { data } = useSelector((state: RootStore) => state.users)
 
-type Props = PropsFromRedux & {}
-
-const Main = (props: Props) => {
   useEffect(() => {
-    props.getData()
+    dispatch(GetUsers())
   }, [])
-  return <div style={{ backgroundColor: props.backgroundColor }}></div>
+
+  return (
+    <div className="App">
+      <input type="text" />
+    </div>
+  )
 }
 
-export default connector(Main)
+export default Main

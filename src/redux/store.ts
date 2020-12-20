@@ -1,31 +1,13 @@
-import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit'
-import createSagaMiddleware from 'redux-saga'
+import { createStore, applyMiddleware } from 'redux'
+import RootReducer from './reducers/RootReducer'
+import { composeWithDevTools } from 'redux-devtools-extension'
+import thunk from 'redux-thunk'
 
-import { rootReducer, rootSaga } from './reducer'
-import { persistStore } from 'redux-persist'
+const Store = createStore(
+  RootReducer,
+  composeWithDevTools(applyMiddleware(thunk))
+)
 
-const sagaMiddleware = createSagaMiddleware({
-  onError: (error: any) => {
-    store.dispatch({ type: error.action || 'ERROR_GENERAL', payload: error })
-  },
-})
+export type RootStore = ReturnType<typeof RootReducer>
 
-const middleware = [
-  ...getDefaultMiddleware({
-    immutableCheck: false,
-    serializableCheck: false,
-    thunk: true,
-  }),
-  sagaMiddleware,
-]
-
-const store = configureStore({
-  reducer: rootReducer,
-  middleware,
-})
-
-export const persistor = persistStore(store)
-
-sagaMiddleware.run(rootSaga)
-
-export default store
+export default Store
