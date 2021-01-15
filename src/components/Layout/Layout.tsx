@@ -11,12 +11,12 @@ interface LayoutProps {
 
 export const Layout: React.FC<LayoutProps> = ({ children, title }) => {
   return (
-    <Flex direction="column" bg="yellow.100" minH="100vh">
+    <Flex direction="column" minH="100vh">
       <Head>
         <title>{title}</title>
       </Head>
       <Header />
-      <Box bg="pink.200" as="main" flexGrow={1} w="100%">
+      <Box as="main" flexGrow={1} w="100%">
         {children}
       </Box>
       <Footer />
