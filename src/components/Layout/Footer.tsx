@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-empty-interface */
 import { Box } from '@chakra-ui/react'
 import React from 'react'
 

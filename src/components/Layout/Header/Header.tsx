@@ -8,7 +8,6 @@ import {
   // useMediaQuery,
 } from '@chakra-ui/react'
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface HeaderProps {}
 
 export const Header: React.FC<HeaderProps> = () => {

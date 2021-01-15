@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-empty-interface */
 import React from 'react'
 import { Box } from '@chakra-ui/react'
 import Link from 'next/link'
