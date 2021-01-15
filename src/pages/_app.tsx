@@ -1,5 +1,3 @@
-// import App from 'next/app'
-
 import { AppProps } from 'next/app'
 import { ChakraProvider } from '@chakra-ui/react'
 

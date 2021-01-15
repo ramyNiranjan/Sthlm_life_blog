@@ -3,10 +3,10 @@ import React from 'react'
 
 interface FooterProps {}
 
-export const Footer: React.FC<FooterProps> = ({}) => {
+export const Footer: React.FC<FooterProps> = () => {
   return (
     <Box as="footer" bg="blue.300">
-      <p>i'm footer</p>
+      <p>im footer</p>
     </Box>
   )
 }

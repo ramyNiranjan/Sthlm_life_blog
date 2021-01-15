@@ -2,12 +2,12 @@ import { Box } from '@chakra-ui/react'
 import React from 'react'
 import { Layout } from '../components/Layout/Layout'
 
-interface OurStoryProps {}
+interface StoryProps {}
 
-export const OurStory: React.FC<OurStoryProps> = ({}) => {
+export const OurStory: React.FC<StoryProps> = () => {
   return (
-    <Layout>
-      <Box as="h1">our story</Box>
+    <Layout title="Our Story">
+      <Box as="h1">Our Story</Box>
     </Layout>
   )
 }
