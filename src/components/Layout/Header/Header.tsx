@@ -4,16 +4,18 @@ import {
   // chakra,
   Box,
   Button,
-  // useDisclosure,
-  // useMediaQuery,
+  useMediaQuery,
 } from '@chakra-ui/react'
 import Link from 'next/link'
 interface HeaderProps {}
 
 export const Header: React.FC<HeaderProps> = () => {
+  const [isDesktop] = useMediaQuery('(min-width: 768px)')
+
   return (
     <Flex
       borderBottom="1px solid black"
+      bg="#FFD600"
       justify="space-between"
       p="5"
       align="center"
@@ -22,8 +24,17 @@ export const Header: React.FC<HeaderProps> = () => {
       <Box>Shtlm_blog</Box>
       <Box as="nav">
         <Box as="ul">
-          <Link href="/Story">Our Story</Link>
-          <Button ml="10">Get started</Button>
+          {isDesktop && (
+            <Link href="/Story">
+              <b style={{ cursor: 'pointer' }}>Our Story</b>
+            </Link>
+          )}
+
+          <Link href="/GetStarted">
+            <Button bg="black" color="white" ml="10">
+              Get started
+            </Button>
+          </Link>
         </Box>
       </Box>
     </Flex>

@@ -6,8 +6,8 @@ interface StoryProps {}
 
 export const OurStory: React.FC<StoryProps> = () => {
   return (
-    <Layout title="Our story">
-      <Box as="h1">our story</Box>
+    <Layout title="Our Story">
+      <Box as="h1">Our Story</Box>
     </Layout>
   )
 }
