@@ -4,9 +4,9 @@ import { Layout } from '../components/Layout/Layout'
 
 interface OurStoryProps {}
 
-export const OurStory: React.FC<OurStoryProps> = ({}) => {
+export const OurStory: React.FC<OurStoryProps> = () => {
   return (
-    <Layout>
+    <Layout title="Our story">
       <Box as="h1">our story</Box>
     </Layout>
   )

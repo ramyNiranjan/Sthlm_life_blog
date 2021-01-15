@@ -16,7 +16,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, title }) => {
         <title>{title}</title>
       </Head>
       <Header />
-      <Box bg="pink.200" as="main" flexGrow="1" w="100%">
+      <Box bg="pink.200" as="main" flexGrow={1} w="100%">
         {children}
       </Box>
       <Footer />

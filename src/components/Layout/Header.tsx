@@ -8,9 +8,10 @@ import {
   // useMediaQuery,
 } from '@chakra-ui/react'
 
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface HeaderProps {}
 
-export const Header: React.FC<HeaderProps> = ({}) => {
+export const Header: React.FC<HeaderProps> = () => {
   return (
     <Flex
       borderBottom="1px solid black"
