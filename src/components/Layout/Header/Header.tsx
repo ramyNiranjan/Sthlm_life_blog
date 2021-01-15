@@ -20,12 +20,12 @@ export const Header: React.FC<HeaderProps> = () => {
       w="100%"
     >
       <Box>Shtlm_blog</Box>
-      <nav>
-        <ul>
+      <Box as="nav">
+        <Box as="ul">
           <Link href="/Story">Our Story</Link>
-          <Button>Get started</Button>
-        </ul>
-      </nav>
+          <Button ml="10">Get started</Button>
+        </Box>
+      </Box>
     </Flex>
   )
 }
