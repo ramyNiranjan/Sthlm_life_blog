@@ -7,7 +7,7 @@ import {
   // useDisclosure,
   // useMediaQuery,
 } from '@chakra-ui/react'
-
+import Link from 'next/link'
 interface HeaderProps {}
 
 export const Header: React.FC<HeaderProps> = () => {
@@ -20,7 +20,12 @@ export const Header: React.FC<HeaderProps> = () => {
       w="100%"
     >
       <Box>Shtlm_blog</Box>
-      <Button>Get started</Button>
+      <nav>
+        <ul>
+          <Link href="/Story">Our Story</Link>
+          <Button>Get started</Button>
+        </ul>
+      </nav>
     </Flex>
   )
 }
