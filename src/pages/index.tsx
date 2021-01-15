@@ -1,31 +1,16 @@
-import Head from 'next/head'
 import React from 'react'
+import { Hero } from '../components/Hero'
+import { Layout } from '../components/Layout/Layout'
 
-interface homeProps {}
+interface HomeProps {}
 
-export const Home: React.FC<homeProps> = () => {
+export const Home: React.FC<HomeProps> = () => {
   return (
-    <div className="container">
-      <Head>
-        <title>Sthlm Home</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
+    <Layout title="Get started">
       <main>
-        <h1>Sthlm Blog</h1>
+        <Hero />
       </main>
-
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
-        </a>
-      </footer>
-    </div>
+    </Layout>
   )
 }
 
