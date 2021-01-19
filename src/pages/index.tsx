@@ -1,22 +1,20 @@
+import Head from 'next/head'
 import React from 'react'
-import { Hero } from '../components/Hero'
-import { Layout } from '../components/Layout/Layout'
 
-
-interface HomeProps {}
-
-export const Home: React.FC<HomeProps> = () => {
-
+export const Home: React.FC = () => {
   return (
-    <div>
-    <Layout title="Get started">
+    <div className="container">
+      <Head>
+        <title>Sthlm Home</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
       <main>
-        <Hero />
+        <h1>Sthlm Blog</h1>
       </main>
-    </Layout>
+
       <footer></footer>
     </div>
-
   )
 }
 
