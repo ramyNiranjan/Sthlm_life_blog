@@ -1,18 +1,27 @@
 import React from 'react'
-import { Box } from '@chakra-ui/react'
+import { Box, Button, Flex, Text } from '@chakra-ui/react'
 import Link from 'next/link'
 interface HeroProps {}
 
-export const Hero: React.FC<HeroProps> = ({}) => {
+export const Hero: React.FC<HeroProps> = () => {
   return (
-    <Box bg="yellow.200">
-      <Box>
-        <p>
+    <Box p="4vw" bg="#FFD600">
+      <Flex direction="row">
+        <Text>
           Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's.
-        </p>
-      </Box>
-      <Link href="/ourStory">Learn More</Link>
+          industry. Lorem Ipsum has been the industrys.{' '}
+          <Link href="/Story">
+            <b style={{ cursor: 'pointer' }}>Learn more</b>
+          </Link>
+        </Text>
+      </Flex>
+      <Flex mt="2" maxWidth="120px" direction="column">
+        <Link href="/GetStarted">
+          <Button bg="black" color="white">
+            Get started
+          </Button>
+        </Link>
+      </Flex>
     </Box>
   )
 }
