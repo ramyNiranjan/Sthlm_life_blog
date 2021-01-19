@@ -19,6 +19,8 @@ if (!firebase.apps.length) {
 interface LoginProps {}
 
 export const Login: React.FC<LoginProps> = () => {
+  const [isSignedIn, setSignedIn] = React.useState(false)
+
   const uiConfig = {
     signInFlow: 'redirect',
     signInOptions: [
@@ -29,8 +31,6 @@ export const Login: React.FC<LoginProps> = () => {
       signInSuccessWithAuthResult: () => false,
     },
   }
-
-  const [isSignedIn, setSignedIn] = React.useState(false)
 
   React.useEffect(() => {
     firebase.auth().onAuthStateChanged((user) => setSignedIn(!!user))
