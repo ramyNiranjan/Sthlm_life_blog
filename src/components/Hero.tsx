@@ -16,7 +16,7 @@ export const Hero: React.FC<HeroProps> = () => {
         </Text>
       </Flex>
       <Flex mt="2" maxWidth="120px" direction="column">
-        <Link href="/GetStarted">
+        <Link href="/GettingStarted">
           <Button bg="black" color="white">
             Get started
           </Button>

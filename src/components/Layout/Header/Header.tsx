@@ -30,7 +30,7 @@ export const Header: React.FC<HeaderProps> = () => {
             </Link>
           )}
 
-          <Link href="/GetStarted">
+          <Link href="/GettingStarted">
             <Button bg="black" color="white" ml="10">
               Get started
             </Button>
