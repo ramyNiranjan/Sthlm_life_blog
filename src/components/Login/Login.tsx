@@ -21,7 +21,7 @@ if (!firebase.apps.length) {
 interface LoginProps {}
 
 export const Login: React.FC<LoginProps> = () => {
-  const { isSignedIn, setSignedIn } = useContext(UserContext)
+  const { isSignedIn, setSignedIn }: any = useContext(UserContext)
 
   const uiConfig = {
     signInFlow: 'redirect',
