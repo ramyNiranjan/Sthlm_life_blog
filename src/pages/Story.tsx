@@ -1,18 +1,19 @@
-import { Box, Flex, Text } from '@chakra-ui/react'
+import { Box, Flex, Text, Image, useMediaQuery } from '@chakra-ui/react'
 import React from 'react'
 import { Layout } from '../components/Layout/Layout'
-import Image from 'next/image'
-
+// import Image from 'next/image'
+// import isDesktop from '../variables/responsive'
 interface StoryProps {}
 
 export const OurStory: React.FC<StoryProps> = () => {
+  const [isDesktop] = useMediaQuery('(min-width: 768px)')
   return (
     <Layout title="Our Story">
       <Box align="center" border="1px solid black" p="4vw">
         <Text fontSize="5xl">Every idea needs a Sthlm_blog</Text>
       </Box>
-      <Flex>
-        <Box p="4vw">
+      <Flex direction={{ sm: 'column', lg: 'row' }} w="100%" h="100%">
+        <Box flex="1">
           <Text fontSize="3xl">What is Lorem Ipsum?</Text>
           <Text>
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -44,12 +45,26 @@ export const OurStory: React.FC<StoryProps> = () => {
             Ipsum.
           </Text>
         </Box>
-        <Box>
+        <Box
+          pos="relative"
+          flex="1"
+          bg="red.100"
+          //   flex="1"
+          //   style={{
+          //     position: 'relative',
+          //   }}
+        >
           <Image
-            src="/me.png"
-            alt="Picture of the author"
-            width={500}
-            height={500}
+            // pos='absolute'
+            // className=
+            alt="Mountains"
+            src="/img/earth.jpg"
+            // layout="fill"
+            objectFit="fill"
+            pos="absolute"
+            top="0"
+            boxSize={`${isDesktop ? '100%' : 'inherit'}`}
+            left="0"
           />
         </Box>
       </Flex>
