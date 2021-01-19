@@ -13,7 +13,7 @@ export const OurStory: React.FC<StoryProps> = () => {
         <Text fontSize="5xl">Every idea needs a Sthlm_blog</Text>
       </Box>
       <Flex direction={{ sm: 'column', lg: 'row' }} w="100%" h="100%">
-        <Box flex="1">
+        <Box p="10" flex="1">
           <Text fontSize="3xl">What is Lorem Ipsum?</Text>
           <Text>
             Lorem Ipsum is simply dummy text of the printing and typesetting
