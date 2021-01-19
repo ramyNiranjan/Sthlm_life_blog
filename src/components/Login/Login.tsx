@@ -1,8 +1,10 @@
 // Configure Firebase.
-import React from 'react'
+import React, { useContext } from 'react'
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth'
 import firebase from 'firebase'
 import { Box } from '@chakra-ui/react'
+import { UserContext } from '../../contexts/UserContext'
+
 const config = {
   apiKey: 'AIzaSyCZR2DF973Aa3N7L2HWQSfKiP6OS2lvR3E',
   authDomain: 'sthlmblog.firebaseapp.com',
@@ -19,7 +21,7 @@ if (!firebase.apps.length) {
 interface LoginProps {}
 
 export const Login: React.FC<LoginProps> = () => {
-  const [isSignedIn, setSignedIn] = React.useState(false)
+  const { isSignedIn, setSignedIn } = useContext(UserContext)
 
   const uiConfig = {
     signInFlow: 'redirect',
